@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Location: MyString
+  Description: MyString
+  ImageName: MyString
+  ImageBase64: MyString
+
+two:
+  Location: MyString
+  Description: MyString
+  ImageName: MyString
+  ImageBase64: MyString

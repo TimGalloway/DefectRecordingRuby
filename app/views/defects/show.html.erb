@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @defect.Location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @defect.Description %>
+</p>
+
+<p>
+  <strong>Imagename:</strong>
+  <%= @defect.ImageName %>
+</p>
+
+<p>
+  <strong>Imagebase64:</strong>
+  <%= image_tag "data:image/jpeg;base64,#{@defect.ImageBase64}" %>
+</p>
+
+<%= link_to 'Edit', edit_defect_path(@defect) %> |
+<%= link_to 'Back', defects_path %>

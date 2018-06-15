@@ -1,0 +1,37 @@
+<%= form_with(model: defect, local: true) do |form| %>
+  <% if defect.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(defect.errors.count, "error") %> prohibited this defect from being saved:</h2>
+
+      <ul>
+      <% defect.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Location %>
+    <%= form.text_field :Location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Description %>
+    <%= form.text_field :Description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ImageName %>
+    <%= form.text_field :ImageName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ImageBase64 %>
+    <%= form.text_field :ImageBase64 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
