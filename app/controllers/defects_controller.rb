@@ -1,5 +1,5 @@
 class DefectsController < ApplicationController
-  #before_action :set_defect, only: [:show, :edit, :update, :destroy]
+  before_action :set_defect, only: [:show, :edit, :update, :destroy]
   protect_from_forgery :except => :create
     
   # GET /defects
@@ -21,6 +21,7 @@ class DefectsController < ApplicationController
 
   # GET /defects/1/edit
   def edit
+    @defect = Defect.find(params[:id])
   end
 
   # POST /defects

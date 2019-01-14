@@ -17,7 +17,7 @@
 
 <p>
   <strong>Imagebase64:</strong>
-  <%= image_tag "data:image/jpeg;base64,#{@defect.ImageBase64}" %>
+  <%= image_tag "data:image/jpeg;base64,#{@defect.ImageBase64}", height: '25%', width:'25%' %>
 </p>
 
 <%= link_to 'Edit', edit_defect_path(@defect) %> |

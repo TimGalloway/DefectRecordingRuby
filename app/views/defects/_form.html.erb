@@ -23,12 +23,16 @@
 
   <div class="field">
     <%= form.label :ImageName %>
-    <%= form.text_field :ImageName %>
+    <%= form.text_field :ImageName, readonly: true %>
   </div>
 
   <div class="field">
     <%= form.label :ImageBase64 %>
-    <%= form.text_field :ImageBase64 %>
+    <%= form.text_field :ImageBase64, readonly: true %>
+  </div>
+
+  <div>
+  <%= image_tag "data:image/jpeg;base64,#{@defect.ImageBase64}", height: '25%', width:'25%' %>
   </div>
 
   <div class="actions">

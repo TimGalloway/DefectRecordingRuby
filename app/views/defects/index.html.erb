@@ -2,12 +2,13 @@
 
 <h1>Defects</h1>
 
-<table>
+<div id="datatable">
+<table class='tablesorter-default'>
   <thead>
     <tr>
       <th>Location</th>
       <th>Description</th>
-      <th>Imagename</th>
+      <th>Created</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,15 +18,15 @@
       <tr>
         <td><%= defect.Location %></td>
         <td><%= defect.Description %></td>
-        <td><%= defect.ImageName %></td>
+        <td><%= defect.created_at %></td>
         <td><%= link_to 'Show', defect %></td>
         <td><%= link_to 'Edit', edit_defect_path(defect) %></td>
-        <td><%= link_to 'Destroy', defect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', defect_path(defect), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
-<br>
-
-<%= link_to 'New Defect', new_defect_path %>
+<div id="details">
+</div>
